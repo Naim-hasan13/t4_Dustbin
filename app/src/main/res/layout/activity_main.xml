@@ -8,7 +8,223 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/ll_home"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_gravity="end"
+        app:lottie_rawRes="@raw/animation" />
+
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:src="@drawable/recycling" />
 
 
+    <ImageView
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:src="@drawable/kachra" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap To Play"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textSize="@dimen/_22sdp"
+        android:textColor="@color/black"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+   <ImageView
+       android:layout_width="@dimen/_35sdp"
+       android:layout_height="@dimen/_35sdp"
+       android:layout_marginStart="@dimen/_10sdp"
+       android:src="@drawable/kachra"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="000"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_weight="1"
+    android:textSize="@dimen/_20ssp"
+    android:textStyle="bold"
+    android:textColor="@color/black"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:background="@drawable/carved_background"
+    android:layout_height="wrap_content"
+android:paddingHorizontal="@dimen/_5sdp"
+    android:paddingVertical="@dimen/_3sdp"
+    android:orientation="horizontal"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:gravity="center_vertical">
+
+
+    <ImageView
+        android:layout_width="@dimen/_22ssp"
+        android:layout_height="@dimen/_22ssp"
+        android:src="@drawable/clock" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
+
+
+</LinearLayout>
+
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:src="@drawable/recycling" />
+
+
+        <ImageView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_150sdp"
+            android:src="@drawable/kachra" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_After_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:src="@drawable/recycling" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/_70sdp"
+android:layout_gravity="center"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/kachra" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x 30"
+        android:textSize="@dimen/_30ssp" />
+
+</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Collected Successful"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_Retry"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:cardBackgroundColor="#008844"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+            <TextView
+                android:layout_width="306dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Retry"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+</LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_home"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+
+android:layout_marginTop="@dimen/_15sdp"
+            app:cardBackgroundColor="#008844"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="306dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Home"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
 </LinearLayout>

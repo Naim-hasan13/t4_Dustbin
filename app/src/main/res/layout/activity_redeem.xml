@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_popup_background"
+        android:gravity="center"
+        android:padding="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/imageDustbin"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:contentDescription="Recycle Bin Icon"
+            android:src="@drawable/recycling" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Store Room"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_25ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_upi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="Enter UPI"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:background="@drawable/rounded_popup_background_gray"
+            android:paddingStart="@dimen/_15sdp"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:hint="Enter Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:background="@drawable/rounded_popup_background_gray"
+            android:paddingStart="@dimen/_15sdp"
+            android:gravity="center_vertical" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_redeem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:cardBackgroundColor="#008844"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Redeem"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</LinearLayout>
