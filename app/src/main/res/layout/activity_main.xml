@@ -8,47 +8,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:id="@+id/ll_home"
+
         android:layout_width="match_parent"
-        android:visibility="gone"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieAnimationView"
-        android:layout_width="@dimen/_45sdp"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:layout_gravity="end"
-        app:lottie_rawRes="@raw/animation" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation" />
+        <LinearLayout
+            android:id="@+id/ll_home2"
 
-    <ImageView
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_120sdp"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_70sdp"
-        android:src="@drawable/recycling" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:src="@drawable/logo" />
 
 
-    <ImageView
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_90sdp"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_80sdp"
-        android:src="@drawable/kachra" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tap To Play"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:textSize="@dimen/_22sdp"
-        android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:src="@drawable/kachra" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Tap To Play"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22sdp"
+            android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -71,6 +79,7 @@
        android:layout_marginStart="@dimen/_10sdp"
        android:src="@drawable/kachra"/>
 <TextView
+    android:id="@+id/tv_count"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="000"
@@ -96,6 +105,7 @@ android:paddingHorizontal="@dimen/_5sdp"
         android:src="@drawable/clock" />
 
     <TextView
+        android:id="@+id/tv_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00"
@@ -112,14 +122,17 @@ android:paddingHorizontal="@dimen/_5sdp"
 
 
         <ImageView
+            android:id="@+id/iv_dustbin"
+
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_100sdp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_70sdp"
-            android:src="@drawable/recycling" />
+            android:src="@drawable/logo" />
 
 
         <ImageView
+            android:id="@+id/iv_kachra"
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_90sdp"
             android:layout_gravity="center"
@@ -131,6 +144,7 @@ android:paddingHorizontal="@dimen/_5sdp"
     <LinearLayout
         android:id="@+id/ll_After_game"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -139,7 +153,7 @@ android:paddingHorizontal="@dimen/_5sdp"
             android:layout_height="@dimen/_100sdp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_100sdp"
-            android:src="@drawable/recycling" />
+            android:src="@drawable/logo" />
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -159,6 +173,7 @@ android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="x 30"
+        android:textColor="@color/black"
         android:textSize="@dimen/_30ssp" />
 
 </LinearLayout>

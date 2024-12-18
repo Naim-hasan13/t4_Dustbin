@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="@drawable/bg"
-    android:gravity="center">
+    tools:context=".MenuActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginHorizontal="@dimen/_20sdp"
@@ -79,7 +82,7 @@
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:contentDescription="Recycle Bin Icon"
-            android:src="@drawable/recycling" />
+            android:src="@drawable/logo" />
 
 
         <TextView
@@ -92,126 +95,106 @@
             android:textStyle="bold" />
 
 
-<LinearLayout
-    android:layout_marginTop="@dimen/_20sdp"
-    android:layout_marginBottom="@dimen/_20sdp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center">
 
-
-
-
-
-
-            <LinearLayout
-                android:id="@+id/iv_kachra"
-                android:layout_width="@dimen/_80sdp"
-                android:layout_height="@dimen/_50sdp"
-                android:padding="@dimen/_10sdp"
-                android:background="@drawable/rounded_popup_background_gray"
-                android:gravity="center"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="@dimen/_35sdp"
-                    android:layout_height="@dimen/_35sdp"
-                    android:contentDescription="Coin Icon"
-                    android:src="@drawable/kachra" />
-
-
-            </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/iv_gem"
-            android:layout_width="@dimen/_80sdp"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/rounded_popup_background_gray"
-            android:gravity="center"
-android:padding="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:contentDescription="Coin Icon"
+                android:src="@drawable/kachra" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="100200"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_18ssp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/rounded_popup_background_gray"
+            android:gravity="center_vertical"
+
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_15sdp"
 
                 android:contentDescription="Gem Icon"
                 android:src="@drawable/gem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="3430"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_18ssp" />
         </LinearLayout>
 
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-android:layout_marginBottom="@dimen/_15sdp"
+
             android:background="@drawable/rounded_popup_background_gray"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/et_enter_value"
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="Bag Icon"
+                android:layout_marginStart="@dimen/_15sdp"
+
+                android:src="@drawable/rupee" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_18ssp" />
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_Redeem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:cardBackgroundColor="#008844"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:textAlignment="center"
-                android:background="null"
-                android:hint="Enter Value"
+                android:gravity="center"
+                android:text="Redeem 🔒"
+                android:textColor="@android:color/white"
                 android:textSize="@dimen/_15ssp"
-                android:textColor="@color/black"
-/>
-
-
-
-        </LinearLayout>
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
-
-                android:background="@drawable/rounded_popup_background_gray"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:contentDescription="Bag Icon"
-                    android:layout_marginStart="@dimen/_15sdp"
-
-                    android:src="@drawable/gem" />
-
-                <TextView
-                    android:id="@+id/tv_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_70sdp"
-                    android:text="0"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/_20ssp" />
-            </LinearLayout>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cv_exchange"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_45sdp"
-                android:layout_marginTop="@dimen/_35sdp"
-                app:cardBackgroundColor="#008844"
-                app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="4dp"
-                app:strokeWidth="0dp">
-
-                <TextView
-                    android:layout_width="306dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Exchange"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+</LinearLayout>
+
