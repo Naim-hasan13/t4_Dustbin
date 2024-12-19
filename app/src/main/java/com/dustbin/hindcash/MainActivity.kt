@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        startUpDownAnimation()
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         setupGame()
-        startUpDownAnimation()
+
 
 
         binding.lottieAnimationView.setOnClickListener {
