@@ -1,5 +1,6 @@
 package com.dustbin.hindcash
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         setupGame()
-
+        startUpDownAnimation()
 
 
         binding.lottieAnimationView.setOnClickListener {
@@ -77,6 +78,20 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+    }
+    private fun startUpDownAnimation() {
+        // Animate ivLogo to move up and down
+        val animator = ObjectAnimator.ofFloat(
+            binding.ivLogo, // Target the ivLogo ImageView
+            "translationY", // Move vertically
+            -50f, 50f // Values to animate (up: -50f, down: 50f)
+        ).apply {
+            duration = 1000 // 1 second for one direction
+            repeatMode = ObjectAnimator.REVERSE // Reverse direction after reaching end
+            repeatCount = ObjectAnimator.INFINITE // Repeat indefinitely
+        }
+
+        animator.start() // Start the animation
     }
 
     private fun startGame() {
