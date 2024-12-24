@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.google.android.gms.ads.nativead.NativeAdView
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:id="@+id/native_ad_view"
+      android:background="@drawable/gnt_outline_shape"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginTop="5dp"
+          android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="45dp"
+            android:layout_weight="0"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="@dimen/gnt_no_margin"
+            app:layout_constraintDimensionRatio="H,1:1"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/content"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+
+            android:layout_height="match_parent">
+          <LinearLayout
+              android:id="@+id/headline"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="0.5"
+              android:gravity="left"
+              >
+
+
+            <TextView
+                android:id="@+id/primary"
+                android:background="@color/gnt_white"
+                android:textStyle="bold"
+                android:textSize="@dimen/gnt_text_size_large"
+                android:textColor="#111111"
+                android:lines="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/robo"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/gnt_no_margin"
+                android:layout_marginBottom="@dimen/gnt_no_margin"
+                android:layout_marginStart="@dimen/gnt_no_margin"
+                android:layout_marginEnd="@dimen/gnt_no_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                ></TextView>
+          </LinearLayout>
+          <LinearLayout
+              android:id="@+id/row_two"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/headline"
+              >
+
+            <TextView
+                android:background="@drawable/gnt_rounded_corners_shape"
+                android:layout_width="@dimen/gnt_ad_indicator_width"
+                android:id="@+id/ad_notification_view"
+                android:layout_height="@dimen/gnt_ad_indicator_height"
+                android:layout_marginTop="@dimen/gnt_ad_indicator_top_margin"
+                android:text="Ad"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:textColor="@color/gnt_ad_green"
+                android:textStyle="bold"
+                android:textSize="@dimen/gnt_ad_indicator_text_size"
+                >
+            </TextView>
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/gnt_text_size_small"
+                android:textColor="@color/gnt_gray"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:lines="1"
+                android:layout_marginTop="@dimen/gnt_no_margin"
+                android:layout_marginBottom="@dimen/gnt_no_margin"
+                android:layout_marginStart="@dimen/gnt_no_margin"
+                android:layout_marginEnd="@dimen/gnt_no_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ad_notification_view"
+                app:layout_constraintTop_toTopOf="parent"
+                style="?android:attr/ratingBarStyleSmall">
+
+            </RatingBar>
+
+            <TextView
+                android:id="@+id/secondary"
+                android:background="@color/gnt_white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:textSize="@dimen/gnt_text_size_small"
+                android:textColor="@color/gnt_gray"
+                android:lines="1"
+                android:layout_marginTop="@dimen/gnt_no_margin"
+                android:layout_marginBottom="@dimen/gnt_no_margin"
+                android:layout_marginStart="@dimen/gnt_no_margin"
+                android:layout_marginEnd="@dimen/gnt_no_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ad_notification_view"
+                app:layout_constraintTop_toTopOf="parent"
+                ></TextView>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_margin="@dimen/gnt_no_size"
+          android:layout_height="wrap_content"
+          android:paddingLeft="@dimen/gnt_default_margin"
+          android:id="@+id/body"
+          android:fontFamily="@font/robo"
+          android:textColor="#736B6B"
+          app:layout_constraintBottom_toTopOf="@+id/cta"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:paddingStart="@dimen/gnt_default_margin"
+          android:layout_marginBottom="2dp"
+          />
+      <com.google.android.gms.ads.nativead.MediaView
+          android:id="@+id/media_view"
+          android:layout_margin="@dimen/gnt_no_size"
+          android:layout_width="match_parent"
+          android:layout_height="135dp"
+          android:layout_marginTop="@dimen/gnt_no_margin"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toTopOf="@id/middle"
+          />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/cta"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:background="@drawable/gnt_bg"
+          android:textColor="@color/gnt_white"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="3dp"
+          android:textStyle="bold"
+          android:layout_marginRight="5dp"
+          android:textSize="17dp"
+          android:lines="1"
+          android:fontFamily="@font/robo"
+          android:layout_marginBottom="5dp"
+          android:gravity="center"
+          />
+    </LinearLayout>
+
+  </com.google.android.gms.ads.nativead.NativeAdView>
+</merge>
