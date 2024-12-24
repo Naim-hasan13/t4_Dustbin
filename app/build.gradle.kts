@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.dustbin.hindcash"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -24,6 +24,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+    }
+    ndkVersion = "25.2.9519653"
+    externalNativeBuild {
+        ndkBuild {
+            path = file("src/main/jni/Android.mk")
         }
     }
     buildFeatures {
@@ -50,4 +56,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation ("com.airbnb.android:lottie:5.2.0")
+    testImplementation(libs.junit)
+    implementation("com.google.android.gms:play-services-ads:23.6.0")
+    implementation(project(":nativetemplates"))
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 }

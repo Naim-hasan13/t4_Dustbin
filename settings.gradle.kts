@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Dustbin"
 include(":app")
+include (":nativetemplates")

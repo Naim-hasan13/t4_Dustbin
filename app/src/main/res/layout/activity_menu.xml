@@ -115,6 +115,7 @@
                 android:src="@drawable/kachra" />
 
             <TextView
+                android:id="@+id/temp_balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -142,6 +143,7 @@
                 android:src="@drawable/gem" />
 
             <TextView
+                android:id="@+id/balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -167,6 +169,7 @@
                 android:src="@drawable/rupee" />
 
             <TextView
+                android:id="@+id/tv_rupee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -187,6 +190,7 @@
             app:strokeWidth="0dp">
 
             <TextView
+                android:id="@+id/tv_redeem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
